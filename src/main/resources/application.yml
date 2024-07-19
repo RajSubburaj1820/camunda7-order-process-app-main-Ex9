@@ -1,0 +1,16 @@
+camunda.bpm.client:
+  base-url: http://localhost:8080/engine-rest
+  max-tasks: 1
+  lock-duration: 20000
+  worker-id: spring-boot-worker-1
+logging:
+  level:
+    "[org.apache.http]": INFO
+server:
+  port: 8081
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: springboot
+    key-password: password
